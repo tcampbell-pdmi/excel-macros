@@ -33,9 +33,9 @@ Sub SendApiRequests()
 
         If Len(Trim(requestBody)) > 0 Then
             #If Mac Then
-                Call PostMac(API_URL, requestBody, "application/octet-stream", respText, respStatus)
+                Call PostMac(API_URL, requestBody, "text/plain", respText, respStatus)
             #Else
-                Call PostWindows(API_URL, requestBody, "application/octet-stream", respText, respStatus)
+                Call PostWindows(API_URL, requestBody, "text/plain", respText, respStatus)
             #End If
             wsOutput.Cells(i, 1).Value = respText
             wsOutput.Cells(i, 2).Value = respStatus
